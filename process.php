@@ -65,3 +65,17 @@ if(isset($_POST['update'])){
     $_SESSION['msg_type'] = 'success';
     header("location: search.php");
 }
+
+
+if(isset($_POST['search']) && $_POST['search']!=''){
+    $searchVal = $_POST['search'];
+    $result = $mysqli->query("SELECT * FROM donors 
+    WHERE first_name LIKE '%$searchVal%' 
+    OR last_name LIKE '%$searchVal%' 
+    OR mobile_no LIKE '%$searchVal%'
+    OR blood_group LIKE '%$searchVal%'
+    OR address LIKE '%$searchVal%'") or die($mysqli->error);
+    
+}else{
+    $result = $mysqli->query("SELECT * FROM donors") or die($mysqli->error);
+}

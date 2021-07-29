@@ -44,22 +44,6 @@
                         <input type="text" name="blood_group" value="<?php echo $blood_group; ?>" class="form-control" placeholder="Enter your blood group">
                     </div>
                 </div>
-                    <!-- <div class="form-group row">
-                        <div class="col-md-6">
-                            <label>Blood group</label>
-                            <select name="blood_group" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                <option selected>---Select your Blood group---</option>
-                                <option value="A+">A+</option>
-                                <option value="B+">B+</option>
-                                <option value="AB+">AB+</option>
-                                <option value="O+">O+</option>
-                                <option value="A-">A-</option>
-                                <option value="B-">B-</option>
-                                <option value="AB-">AB-</option>
-                                <option value="O-">O-</option>
-                              </select>
-                        </div>
-                    </div> -->
                 <div class="form-group row">
                     <div class="col-md-6">
                         <label>Mobile No.</label>

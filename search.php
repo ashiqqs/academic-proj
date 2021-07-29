@@ -35,11 +35,11 @@
                 </div>
          <?php endif ?>
                 <div class="col-md-4 ml-auto">
-                    <form>
+                    <form action="search.php" method="POST">
                       <div class="input-group">
-                          <input type="text" class="form-control" placeholder="Search.." name="Search by name">
+                          <input type="text" name="search" class="form-control" placeholder="Search.." name="Search by name">
                           <div class="input-group-append">
-                              <button class="btn btn-primary">Search</button>
+                              <button type="submit" class="btn btn-primary">Search</button>
                           </div>
                       </div>
                     </form>
@@ -60,10 +60,9 @@
                     <tbody>
 
                     <?php
-             $mysqli = new mysqli('localhost', 'root', '', 'bloodbank') or die(mysqli_error($mysqli));
-             $result = $mysqli->query("SELECT * FROM donors") or die($mysqli->error);
-             $i = 0;
-                while ($row = $result->fetch_assoc()):?>
+                        
+                        $i = 0;
+                        while ($row = $result->fetch_assoc()):?>
 
                         <tr> 
                           <td><?php echo ++$i; ?></td>
