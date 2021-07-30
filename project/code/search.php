@@ -35,9 +35,9 @@
                 </div>
          <?php endif ?>
                 <div class="col-md-4 ml-auto">
-                    <form action="search.php" method="POST">
+                    <form action="search.php" method="GET">
                       <div class="input-group">
-                          <input type="text" name="search" class="form-control" placeholder="Search.." name="Search by name">
+                          <input type="text" name="search" value="<?= $_GET['search'] ?? '' ?>" class="form-control" placeholder="Search.." name="Search by name">
                           <div class="input-group-append">
                               <button type="submit" class="btn btn-primary">Search</button>
                           </div>

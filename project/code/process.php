@@ -16,6 +16,7 @@ if(isset($_POST['save'])){
     $last_name = $_POST['last_name'];
     $blood_group = $_POST['blood_group'];
     $mobile_no = $_POST['mobile_no'];
+    $district = $_POST['district'];
     $address = $_POST['address'];
 
     $mysqli->query("INSERT INTO donors (first_name, last_name, blood_group,mobile_no, address) VALUES('$first_name','$last_name','$blood_group','$mobile_no','$address')") or
@@ -66,16 +67,15 @@ if(isset($_POST['update'])){
     header("location: search.php");
 }
 
-
-if(isset($_POST['search']) && $_POST['search']!=''){
-    $searchVal = $_POST['search'];
+if(isset($_GET['search']) && $_GET['search']!=''){
+    $searchVal = $_GET['search'];
     $result = $mysqli->query("SELECT * FROM donors 
     WHERE first_name LIKE '%$searchVal%' 
     OR last_name LIKE '%$searchVal%' 
     OR mobile_no LIKE '%$searchVal%'
     OR blood_group LIKE '%$searchVal%'
     OR address LIKE '%$searchVal%'") or die($mysqli->error);
-    
+
 }else{
     $result = $mysqli->query("SELECT * FROM donors") or die($mysqli->error);
 }

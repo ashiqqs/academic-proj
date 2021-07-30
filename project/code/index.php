@@ -25,7 +25,7 @@
             <!-- <h3 class="text-success">Life saver</h3> -->
             <h6>Developed by</h6>
             <ul class="list-group">
-                <li class="list-group-item">Abdul Kader</li>
+                <li class="list-group-item">Abdul Kadir</li>
                 <li class="list-group-item">Amit</li>
                 <li class="list-group-item"><b>Ashiq</b></li>
                 <li class="list-group-item">Bithi</li>
